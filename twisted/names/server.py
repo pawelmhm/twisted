@@ -275,14 +275,8 @@ class DNSServerFactory(protocol.ServerFactory):
         The resolved answers count will be logged if C{DNSServerFactory.verbose}
         is C{>1}.
 
-        @param ans: A list of answer records
-        @type ans: L{list} of L{dns.RRHeader} instances
-
-        @param auth: A list of authority records
-        @type auth: L{list} of L{dns.RRHeader} instances
-
-        @param add: A list of additional records
-        @type add: L{list} of L{dns.RRHeader} instances
+        @param ans_auth_add: Answer records, authority records and additional records
+        @type ans_auth_add: L{tuple} of L{list} of L{dns.RRHeader} instances
 
         @param protocol: The DNS protocol instance to which to send a response
             message.
